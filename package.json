@@ -1,8 +1,8 @@
 {
-  "name": "postman-clone-react",
+  "name": "api-manager",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://rohan-hari.github.io/Postman-Clone-React",
+  "homepage": "http://localhost/api-manager",
   "dependencies": {
     "@codemirror/basic-setup": "^0.18.2",
     "@codemirror/commands": "^0.18.3",

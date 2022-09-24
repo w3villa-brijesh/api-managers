@@ -1,0 +1,18 @@
+.ul-style{
+    background-color: #ccc;
+    padding: 15px;
+}
+/* .ul-style > li{
+    font-weight: bold;
+} */
+.ul-style{
+    margin-left: 10px;
+}
+
+.ul-style ul li{
+    font-weight: normal;
+}
+
+summary {
+    font-weight: 600;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from './components/Layout/Layout';
 import Request from './components/Workspace/Request/RequestPanel';
 import Response from './components/Workspace/Response/ResponsePanel';
+import Aside from './components/Aside/Aside';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const App = () => {
@@ -10,12 +11,20 @@ const App = () => {
 
   return (
     <>
+
       <BrowserRouter>
         <Switch>
-          <Route path="/dashboard">
+          <Route path="/api-manager">
             <Layout>
-              <Request setResponse={setResponse} setLoading={setLoading} />
-              <Response response={response} loading={loading} />
+              <Aside/>
+              <div className='main-container col-md-9'>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <Request setResponse={setResponse} setLoading={setLoading} />
+                <Response response={response} loading={loading} />
+              </div>
             </Layout>
           </Route>
         </Switch>
