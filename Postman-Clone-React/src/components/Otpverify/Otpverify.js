@@ -1,30 +1,42 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Otpverify.css'
 
 function Otpverify() {
+
     const [email, setEmail] = useState();
     const [otp, setOtp] =useState();
+    const navigate = useNavigate();
     async function verifyOtp() {
+        console.log("hello")
         try {
             var authOptions = {
                 method: 'POST',
-                url: 'http://52.33.80.175:1337/user/email/verify',
-                data: { email: email, otp},
+                url: `http://52.33.80.175:1337/user/email/verify`,
+                data: { email: email, otp: otp},
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 }
             };
+
             return await axios(authOptions).then(res=>{
                 if (res && res.status === 200 && res.data.success) {
-                    console.log("err")
+                    console.log(res,"Success")
+                    localStorage.setItem("Token", res.data.data.token)
+                    navigate("/OtpVerify", {
+                        state: {
+                          email: email,
+                          // otp: otp,
+                        },
+                      });
                 } else {
                     console.log("err")
                 }
             })
         } catch(err) {
-            console.log("error")
+            console.log(err,"error")
         }
     }
   return (

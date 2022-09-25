@@ -22,6 +22,7 @@ function Registration() {
                     'Content-Type': 'application/json'
                 }
             };
+            console.log('auth',authOptions );
             return await axios(authOptions).then(res=>{
                 if (res && res.status === 200 && res.data.success) {
                     console.log("err")
