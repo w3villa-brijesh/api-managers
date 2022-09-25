@@ -84,7 +84,7 @@ export default function Request({ setResponse, setLoading, loading }) {
         url: 'http://52.33.80.175:1337/user?projectId=1',
         method: 'POST',
         headers: {
-          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NjQwNTI3NTksImV4cCI6MTY2NjY0NDc1OX0._jXi9Jb24hS3AvdJhd0j6x9OMtbfwTXYOxHmig1pzd4'
+          token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY2NDA2Mzk0MSwiZXhwIjoxNjY2NjU1OTQxfQ.OP_y3LT0WFxoVH1tjXCs8T919TPzQzmyYB6pFpnczCI'
         },
         data: {url: url, method: reqMethod, projectId: 1, name: url.split('/')[3] }
 
